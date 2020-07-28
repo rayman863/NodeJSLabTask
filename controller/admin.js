@@ -6,12 +6,16 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-    res.send('post');
-    // if(req.body.addemp == "addemp"){
-    //     res.redirect('/admin/addemployee');
-    // }else if(req.body.allemp == "allemp"){
-    //         res.redirect('/admin/allemployeelist');
-	// }
+    // res.send('post');
+    if(req.body.addemp == "addemp"){
+        res.redirect('/admin/addemployee');
+    }else if(req.body.allemp == "allemp"){
+        res.render('allemployeelist');
+	}
+});
+
+router.get('/addemployee', function(req, res) {
+    res.render('addemployee');    
 });
 
 module.exports = router;

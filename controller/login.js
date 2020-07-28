@@ -9,10 +9,10 @@ router.post('/', function(req, res) {
     if(req.body.uname == "admin"){
         res.redirect('/admin');
     }else if(req.body.uname == "employee"){
-            res.redirect('/employee');
+        res.redirect('/employee');
 	}else{
 		res.send('invalid username/password');
-	} 
+	}
 });
 
 module.exports = router;
